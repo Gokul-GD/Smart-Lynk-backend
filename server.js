@@ -4,6 +4,7 @@ import WeatherRoutes from './Routes/WeatherRoutes.js';
 import ConnectDB from './config/db.js';
 import router from './Routes/authRoutes.js';
 import cors from 'cors';
+import DeviceRouter from './Routes/deviceRoute.js';
 
 
 dotenv.config();
@@ -16,8 +17,10 @@ app.use(express.json());
 ConnectDB();
 
 // for routes
+
 app.use('/api/weather', WeatherRoutes);
 app.use('/api/auth', router)
+app.use('/api/devices', DeviceRouter);
 
 // app.get('/', (req, res) => res.send('API is running'));
 

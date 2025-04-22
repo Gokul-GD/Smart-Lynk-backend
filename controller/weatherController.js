@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
  const getWeather = async (req, res) => {
     const city = req.params.city;
     const apiKey = process.env.WEATHER_KEY;
